@@ -10,14 +10,14 @@
 #include "c_uart3.h"
 #include<stdio.h>
 #include "io.h"
-#include "printf_lib.h"
+//#include "printf_lib.h"
 
 //--------------------------------Sender-----------------------------------------//
 bool C_period_init(void)
 {
 //    uart3_init(9600,5,5);
-    uart2_init(9600,5,5);
-    return true;
+    return uart2_init(9600,5,5);
+    
 }
 bool C_period_reg_tlm(void) {
     return true;
