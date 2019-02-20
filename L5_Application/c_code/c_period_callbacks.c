@@ -15,8 +15,8 @@
 //--------------------------------Sender-----------------------------------------//
 bool C_period_init(void)
 {
-//    uart3_init(9600,5,5);
     return uart2_init(9600,5,5);
+    //return uart2_init(9600,5,5);
     
 }
 bool C_period_reg_tlm(void) {
@@ -25,7 +25,7 @@ bool C_period_reg_tlm(void) {
 
 void C_period_1Hz(uint32_t count)
 {
-    (void) count;
+/*    (void) count;
 
  static char send_data= '0';
     uart2_putChar(send_data, 0);
@@ -35,17 +35,17 @@ void C_period_1Hz(uint32_t count)
    else
    {
        send_data++;
-   }
+   }*/
 
-//   (void) count;
-//      char receive_data;
-//      uint8_t var;
-//      if(uart3_getChar(&receive_data, 0))
-//      {
-//          var =receive_data;
-//          var= (var-48)*10; //converting ascii to decimal and scaling up.
-//          C_LED_Display(var);
-//      }
+   (void) count;
+      char receive_data;
+      uint8_t var;
+      if(uart2_getchar(&receive_data, 0))
+      {
+          var =receive_data;
+          var= (var-48)*10; //converting ascii to decimal and scaling up.
+          C_LED_Display(var);
+      }
 
 
 
