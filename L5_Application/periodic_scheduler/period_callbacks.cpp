@@ -29,7 +29,6 @@
  */
 
 #include <stdint.h>
-#include "io.hpp"
 #include "periodic_callback.h"
 #include "c_code/c_period_callbacks.h"
 
@@ -86,6 +85,6 @@ void period_100Hz(uint32_t count)
 // scheduler_add_task(new periodicSchedulerTask(run_1Khz = true));
 void period_1000Hz(uint32_t count)
 {
-    C_period_1000Hz(count);
+ //   C_period_1000Hz(count);
    // LE.toggle(4);
 }

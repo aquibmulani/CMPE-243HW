@@ -27,8 +27,6 @@
 #include "sys_config.h"
 #include "lpc_sys.h"    // sys_get_uptime_ms()
 
-
-
 /**
  * If non-zero, test code is enabled, and each message sent is self-recepted.
  * You need to either connect a CAN transceiver, or connect RD/TD wires of
@@ -407,6 +405,7 @@ bool CAN_init(can_t can, uint32_t baudrate_kbps, uint16_t rxq_size, uint16_t txq
 
 bool CAN_tx (can_t can, can_msg_t *pCanMsg, uint32_t timeout_ms)
 {
+
     if (!CAN_VALID(can) || !pCanMsg || CAN_is_bus_off(can)) {
         return false;
     }
